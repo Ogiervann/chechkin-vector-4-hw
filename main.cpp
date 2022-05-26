@@ -8,8 +8,6 @@
 #define TESTNUMBER5 1
 #define VECSIZE 4
 
-
-
 int main()
 {
     MyVector<int, VECSIZE> s;
