@@ -1,14 +1,23 @@
 #include "myvector.hpp"
 #include "myvectoriterator.hpp"
 
+#define TESTNUMBER1 5
+#define TESTNUMBER2 6
+#define TESTNUMBER3 123
+#define TESTNUMBER4 12345
+#define TESTNUMBER5 1
+#define VECSIZE 4
+
+
+
 int main()
 {
-    MyVector<int, 4> s;
-    s.add(5);
-    s.add(6);
-    s.add(123);
-    s.add(12345);
-    s.add(1);
+    MyVector<int, VECSIZE> s;
+    s.add(TESTNUMBER1);
+    s.add(TESTNUMBER2);
+    s.add(TESTNUMBER3);
+    s.add(TESTNUMBER4);
+    s.add(TESTNUMBER5);
     std::cout << "Current size = " << s.size
               << "; Current capacity = " << s.capacity << "; \n";
 
@@ -19,7 +28,7 @@ int main()
 
     // std::cout << "s[0] = " << s.data[0] << "\n";
 
-    MyVector_iterator<int, 4> i(&s);
+    MyVector_iterator<int, VECSIZE> i(&s);
     // std::cout << "s[0] = " << s.data[0] << "\n";
 
     std::cout << *i << " " << i.index << " " << (*(i.base)).data[1] << "\n";
